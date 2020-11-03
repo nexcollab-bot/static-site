@@ -3,10 +3,10 @@ kind: Serivce
 metadate:
   name: website-service
   labels:
-    app: webiste
+    app: nginx
 spec:
   selector:
-    app: website
+    app: nginx
   ports:
     - port: 80
       targetPort: 80
