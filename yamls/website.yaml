@@ -18,18 +18,3 @@ spec:
         - name: nginx
           image: nginx
           
----
-apiVersion: v1
-kind: Serivce
-metadate:
-  name: website-service
-  labels:
-    app: webiste
-spec:
-  selector:
-    app: website
-  ports:
-    - port: 80
-      targetPort: 80
-      protocol: TCP
-  type: NodePort
