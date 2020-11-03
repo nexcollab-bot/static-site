@@ -2,7 +2,7 @@ FROM nginx
 ENV AUTHOR=Mozi
 
 WORKDIR /usr/share/nginx/html
-COPY index.html /usr/share/nginx/html
+COPY ./index.html /usr/share/nginx/html/index.html
 
 RUN apt-get update && apt-get install vim
 
