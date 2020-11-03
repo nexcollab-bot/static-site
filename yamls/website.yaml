@@ -3,18 +3,18 @@ kind: Deployment
 metadata:
   name: webiste-deployment
   labels:
-    app: webiste
+    app: nginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: webiste
+      app: nginx
   template:
     metadata:
       labels:
-        app: website
+        app: nginx
     spec:
       container:
-        - name: webiste
+        - name: nginx
           image: nginx
           
