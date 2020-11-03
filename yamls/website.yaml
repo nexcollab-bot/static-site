@@ -15,5 +15,5 @@ spec:
         app: static-site
     spec:
       containers:
-      - image: localhost:32000/static-site:v0.0.1
+      - image: localhost:32000/static-site:v0.0.2
         name: static-site
