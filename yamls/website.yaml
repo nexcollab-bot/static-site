@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webiste-deployment
+  labels
+    app: webiste
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webiste
+  template:
+    metadata:
+      labels:
+        app: website
+    spec:
+      container:
+        - name: nginx
+          image: nginx
+          
+---
+apiVersion: v1
+kind: Serivce
+metadate:
+  name: website-service
+  labels:
+    app: webiste
+spec:
+  selector:
+    app: website
+  ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+  type: NodePort
