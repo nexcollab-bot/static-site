@@ -15,6 +15,6 @@ spec:
         app: website
     spec:
       container:
-        - name: nginx
+        - name: webiste
           image: nginx
           
