@@ -1,20 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webiste-deployment
   labels:
-    app: static-website
+    app: nginx
+  name: nginx
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: static-website
+      app: nginx
   template:
     metadata:
       labels:
-        app: static-website
+        app: nginx
     spec:
-      container:
-        - name: nginx
-          image: nginx
-          
+      containers:
+      - image: nginx
+        name: nginx
