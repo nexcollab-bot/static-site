@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: static-site
-  name: static-site-deployment
+    app: site-demo
+  name: site-demo-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: static-site
+      app: site-demo
   template:
     metadata:
       labels:
-        app: static-site
+        app: site-demo
     spec:
       containers:
-      - image: localhost:32000/static-site:v0.0.2
-        name: static-site
+      - image: localhost:32000/mysite:registry
+        name: mysite
